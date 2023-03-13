@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.exameninterfaces2evloren.PrimaryController">
+    
+    <right>
+      <TableView fx:id="tabla" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#alumnoSeleccionado" prefHeight="640.0" prefWidth="880.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets left="20.0" />
+         </BorderPane.margin>
+         <columns>
+            <TableColumn fx:id="cNombre" prefWidth="75.0" text="Nombre" />
+            <TableColumn fx:id="cApellidos" prefWidth="75.0" text="Apellidos" />
+            <TableColumn fx:id="cAcceso" prefWidth="75.0" text="AD" />
+            <TableColumn fx:id="cSistemas" prefWidth="75.0" text="SGE" />
+            <TableColumn fx:id="cInterfaces" prefWidth="75.0" text="DI" />
+            <TableColumn fx:id="cMultimedia" prefWidth="75.0" text="PMDM" />
+            <TableColumn fx:id="cServicios" prefWidth="75.0" text="PSP" />
+            <TableColumn fx:id="cEmpresa" prefWidth="75.0" text="EIE" />
+            <TableColumn fx:id="cBigdata" prefWidth="75.0" text="HLC" />
+         </columns>
+      </TableView>
+   </right>
+   <bottom>
+      <Label fx:id="labelInfo" text="Información del programa" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets top="20.0" />
+         </BorderPane.margin>
+      </Label>
+   </bottom>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+   <top>
+      <VBox alignment="CENTER" prefHeight="84.0" prefWidth="1180.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Gestión de calificaciones">
+               <font>
+                  <Font name="Lucida Sans Unicode" size="36.0" />
+               </font>
+            </Label>
+            <Label text="Creado por Loren Lynch">
+               <font>
+                  <Font name="Lucida Sans Unicode" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </top>
+   <left>
+      <VBox alignment="CENTER" prefHeight="583.0" prefWidth="271.0" BorderPane.alignment="CENTER">
+         <children>
+            <GridPane prefHeight="290.0" prefWidth="271.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.0" minWidth="10.0" prefWidth="62.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="209.0" minWidth="10.0" prefWidth="209.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Apellidos" GridPane.rowIndex="1" />
+                  <Label text="A. datos" GridPane.rowIndex="2" />
+                  <Label text="SGE" GridPane.rowIndex="3" />
+                  <Label text="Interfaces" GridPane.rowIndex="4" />
+                  <Label text="Multimedia" GridPane.rowIndex="5" />
+                  <TextField fx:id="tvNombre" prefHeight="30.0" prefWidth="210.0" GridPane.columnIndex="1">
+                     <tooltip>
+                        <Tooltip text="Inserte el nombre del alumno" />
+                     </tooltip></TextField>
+                  <Label text="Nombre" />
+                  <Label text="Servicios" GridPane.rowIndex="6" />
+                  <Label text="Empresa" GridPane.rowIndex="7" />
+                  <Label text="Big Data" GridPane.rowIndex="8" />
+                  <TextField fx:id="tvApellidos" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <tooltip>
+                        <Tooltip text="Inserte los apellidos del alumno" />
+                     </tooltip>
+                  </TextField>
+                  <TextField fx:id="tvAcceso" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <tooltip>
+                        <Tooltip text="Nota de acceso a datos" />
+                     </tooltip>
+                  </TextField>
+                  <TextField fx:id="tvSistemas" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <tooltip>
+                        <Tooltip text="Nota de Sistemas de gestión empresarial" />
+                     </tooltip>
+                  </TextField>
+                  <TextField fx:id="tvInterfaces" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <tooltip>
+                        <Tooltip text="Nota de Desarrollo de interfaces" />
+                     </tooltip>
+                  </TextField>
+                  <TextField fx:id="tvMultimedia" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <tooltip>
+                        <Tooltip text="Nota de Programación multimedia" />
+                     </tooltip>
+                  </TextField>
+                  <TextField fx:id="tvServicios" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                     <tooltip>
+                        <Tooltip text="Nota de Programación de servicios y procesos" />
+                     </tooltip>
+                  </TextField>
+                  <TextField fx:id="tvEmpresa" GridPane.columnIndex="1" GridPane.rowIndex="7">
+                     <tooltip>
+                        <Tooltip text="Nota de Empresa e iniciativa emprendedora" />
+                     </tooltip>
+                  </TextField>
+                  <TextField fx:id="tvBigdata" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                     <tooltip>
+                        <Tooltip text="Nota de Big Data" />
+                     </tooltip>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </GridPane>
+            <Button fx:id="botonInsertar" mnemonicParsing="false" onAction="#insertarAlumno" text="Insertar">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin></Button>
+            <Button fx:id="botonNotas" mnemonicParsing="false" onAction="#jaspersoft" text="Descargar notas">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="botonSalir" mnemonicParsing="false" onAction="#salir" text="Salir" /> <!--onAction="#añadirATabla" text="Añadir a la tabla"--> 
+         </children>
+      </VBox>
+   </left>
+</BorderPane>
